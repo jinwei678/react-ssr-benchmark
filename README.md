@@ -1,5 +1,3 @@
+在浏览器中进行 ssr 测试
 
-TODO
-
-- [ ] 添加 ECharts 可视化
-- [ ] 添加更多的首页
+demo https://github.com/jinwei678/react-ssr-benchmark
