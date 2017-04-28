@@ -12,9 +12,9 @@ gulp.task("browserify",function(){
                                              "presets": ['es2015', 'react', 'stage-0'],
                                              "plugins": [ "transform-class-properties", "transform-decorators-legacy" ]
                                          })
-                                         .bundle()
+                                          .bundle()
                                          .pipe(source('index.js'))
-                                         .pipe(sourcemaps.write('.'))
+                                         // .pipe(sourcemaps.write('.'))
                                          .pipe(gulp.dest('dist'));
 });
 
