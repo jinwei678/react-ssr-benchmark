@@ -2,35 +2,33 @@
 <head>
   <meta charset="utf-8">
   <style>
-    .chart {
-      margin: 20px;
-      padding: 20px 5px 5px 5px;
-      border: 1px dashed #aaa;
-      border-radius: 2px;
-    }
+   .chart {
+     margin: 20px;
+     padding: 20px 5px 5px 5px;
+     border: 1px dashed #aaa;
+     border-radius: 2px;
+   }
+   .indent {
+     padding-left: 20px;
+   }
+   .indent-1 {
+     padding-left: 16px;
+   }
   </style>
 </head>
 <html>
   <body>
     <div id="react-body"></div>
     <form action="" name="components">
-      <p>
+      <p class="indent-1">
         <label><input type="checkbox" checked class="component" name="component" value="0" />课堂首页</label>
-      </p>
-      <p>
         <label><input type="checkbox" checked class="component" name="component" value="1" />淘宝首页</label>
-      </p>
-      <p>
         <label><input type="checkbox" checked class="component" name="component" value="2" />天猫首页</label>
-      </p>
-      <p>
         <label><input type="checkbox" checked class="component" name="component" value="3" />京东首页</label>
-      </p>
-      <p>
         <label><input type="checkbox" checked class="component" name="component" value="4" />课堂首页新版</label>
       </p>
     </form>
-    <p>
+    <p class="indent">
       <button id="run">运行</button>
     </p>
     <div id="chart01" class="chart" style="width: 800px;height:400px;"></div>
