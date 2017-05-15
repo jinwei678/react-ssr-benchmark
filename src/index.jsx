@@ -4,7 +4,7 @@
  * - 节点数
  * - 节点深度分布
  */
-import { timingReact, timingFastReact } from './lib/timing';
+import { timingReact, timingFastReact, profileReact, profileFastReact } from './lib/timing';
 
 import Ke from './components/Ke';
 import Taobao from './components/Taobao';
@@ -195,9 +195,20 @@ function renderChart() {
   renderBarSize();
 }
 
+
 function init() {
-  let btn = document.querySelector('#run');
-  btn && btn.addEventListener('click', renderChart);
+  document.querySelector('#run').addEventListener('click', renderChart);
+
+  document.querySelector('#profile-react').addEventListener('click', function() {
+    let el = components[0];
+    profileReact(el.component);
+  });
+
+  document.querySelector('#profile-fast-react').addEventListener('click', function() {
+    let el = components[0];
+    profileFastReact(el.component);
+  });
+
   renderChart();
 }
 
