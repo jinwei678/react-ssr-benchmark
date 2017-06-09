@@ -211,5 +211,4 @@ function init() {
 
   renderChart();
 }
-
 init();
