@@ -10,7 +10,7 @@ var jsx = require('jsx-transform');
 const parse5 = require('parse5');
 
 // TODO use cli 
-var content = fs.readFileSync('../source/xueyuan.html').toString();
+var content = fs.readFileSync('../source/coursebreak.html').toString();
 var fragmentTreeNode = parse5.parseFragment(content);
 
 var totalTag = -1;
@@ -61,4 +61,4 @@ var info = JSON.stringify({
     depthMap: depthMap
 });
 
-fs.writeFileSync("../components/xueyuan.js", ["var React = require('react')", "var FastReact = require('fast-react-server')",'var A=' + A, 'var B=' + B, 'exports.A = A;exports.B = B', 'exports.info='+info].join(';'));
+fs.writeFileSync("../components/coursebreak.js", ["var React = require('react')", "var FastReact = require('fast-react-server')",'var A=' + A, 'var B=' + B, 'exports.A = A;exports.B = B', 'exports.info='+info].join(';'));
